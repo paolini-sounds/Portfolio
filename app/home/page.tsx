@@ -15,7 +15,7 @@ const HomePage = () => {
 			>
 				<div className='hero-content flex-col lg:flex-row-reverse gap-0 lg:gap-10'>
 					<motion.div
-						className='w-[60%] md:w-[45%] lg:w-[30%] mb-6'
+						className='w-[50%] md:w-[45%] lg:w-[30%] mb-6'
 						initial={{ opacity: 0, y: -20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ delay: 1, duration: 1, ease: 'easeOut' }}
@@ -29,7 +29,7 @@ const HomePage = () => {
 
 					<div className='px-5 md:px-0'>
 						<p className='text-teal-500 font-bold text-2xl'>Hello, I&#39;m</p>
-						<h1 className='text-8xl font-bold drop-shadow-[0_0_10px_rgba(227,223,222,0.2)]'>
+						<h1 className='text-6xl lg:text-8xl font-bold drop-shadow-[0_0_10px_rgba(227,223,222,0.2)]'>
 							Andrew Paolini
 						</h1>
 						<motion.div
@@ -37,7 +37,7 @@ const HomePage = () => {
 							animate={{ opacity: 1, x: 0 }}
 							transition={{ delay: 1, duration: 1, ease: 'easeOut' }}
 						>
-							<p className='text-gray-400 font-bold text-4xl my-3 drop-shadow-[0_0_10px_rgba(227,223,222,0.6)'>
+							<p className='text-gray-400 font-bold text-2xl lg:text-4xl my-3 drop-shadow-[0_0_10px_rgba(227,223,222,0.6)'>
 								Full Stack Developer
 							</p>
 						</motion.div>
