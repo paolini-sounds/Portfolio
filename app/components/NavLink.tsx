@@ -2,18 +2,20 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import React from 'react';
+import handleScroll from '../util/handleScroll';
 
 interface Props {
-	handleScroll: (target: string) => void;
+	text: string;
+	target: string;
 }
 
-const NavLink = ({ text, target, scrollTo }: Props) => {
+const NavLink = ({ text, target }: Props) => {
 	return (
 		<button
-			className='font-bold hover:text-green-100'
-			onClick={() => handleScroll('about')}
+			className='btn btn-ghost text-lg hover:text-green-100'
+			onClick={() => handleScroll(target)}
 		>
-			About
+			{text}
 		</button>
 	);
 };

@@ -6,17 +6,19 @@ import andrewpic from '../../public/Andrew_Picture.jpg';
 import handleScroll from '../util/handleScroll';
 
 const HomePage = () => {
+	const navbarHeight = document.querySelector('.navbar')?.clientHeight || 0;
+	console.log('navbarHeiht: ' + navbarHeight);
 	return (
-		<section id='home'>
+		<section id='home' className=''>
 			<motion.div
-				className='hero bg-base-200 items-start pt-11 md:pt-0 md:items-center min-h-screen'
+				className='hero bg-base-200 items-start pt-11 lg:pt-[20vh] min-h-screen'
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				transition={{ duration: 1, ease: 'easeIn' }}
 			>
 				<div className='hero-content flex-col lg:flex-row-reverse gap-0 lg:gap-10'>
 					<motion.div
-						className='w-[60%] md:w-[45%] lg:w-[30%]'
+						className='w-[60%] md:w-[45%] lg:w-[30%] mb-6'
 						initial={{ opacity: 0, y: -20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ delay: 1, duration: 1, ease: 'easeOut' }}
@@ -55,14 +57,20 @@ const HomePage = () => {
 							>
 								Projects
 							</button>
-							<button className='btn text-violet-300 hover:text-violet-400 transition-all'>
+							<a
+								href='https://www.linkedin.com/in/andrewpaolini5/'
+								className='btn text-violet-300 hover:text-violet-400 transition-all'
+							>
 								<Linkedin />
 								LinkedIn
-							</button>
-							<button className='btn text-teal-200 hover:text-teal-300 transition-all'>
+							</a>
+							<a
+								href='https://github.com/paolini-sounds'
+								className='btn text-teal-200 hover:text-teal-300 transition-all'
+							>
 								<Github />
 								GitHub
-							</button>
+							</a>
 						</motion.div>
 					</div>
 				</div>
