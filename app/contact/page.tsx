@@ -1,4 +1,5 @@
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { FaLinkedin } from 'react-icons/fa';
 import React from 'react';
 
 const ContactSection = () => {
@@ -12,21 +13,22 @@ const ContactSection = () => {
 							I am always looking to make new connections. Feel free to connect
 							via LinkedIn or Email!
 						</p>
-
-						<a
-							href='https://www.linkedin.com/in/andrewpaolini5/'
-							className='btn btn-primary mr-5'
-						>
-							<Linkedin />
-							LinkedIn
-						</a>
-						<a
-							href='mailto:andrewpaolini123@gmail.com'
-							className='btn btn-primary'
-						>
-							<Mail />
-							Email
-						</a>
+						<div className='flex w-[100%]  justify-center'>
+							<a
+								href='https://www.linkedin.com/in/andrewpaolini5/'
+								className='btn btn-primary text-teal-300 mr-5'
+							>
+								<FaLinkedin />
+								LinkedIn
+							</a>
+							<a
+								href='mailto:andrewpaolini123@gmail.com'
+								className='btn btn-primary text-purple-300'
+							>
+								<Mail />
+								Email
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>

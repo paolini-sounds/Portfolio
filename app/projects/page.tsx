@@ -9,7 +9,7 @@ import portfolioSiteImg from '../../public/PortfolioSite.png';
 
 const ProjectsSection = () => {
 	return (
-		<section id='projects' className='px-2'>
+		<section id='projects' className='px-2 mb-12'>
 			<h1 className='text-6xl font-bold mt-8 mb-10'>Projects</h1>
 			<div className='grid grid-cols-1 lg:grid-cols-2 justify-items-center place-content-center items-center gap-x-32 gap-y-12 max-w-[100%] mx-auto lg:max-w-[90%] xl:max-w-[80%]'>
 				<ProjectCard
@@ -36,8 +36,9 @@ const ProjectsSection = () => {
 					tools={['React Native', 'TypeScript', 'Zustand']}
 					gitHubLink='https://github.com/paolini-sounds/EventScope'
 				>
-					A mobile Application to search events using Ticketmaster's Discovery
-					API. Allows searching and filtering by date, category, and location
+					A mobile Application to search events using Ticketmaster&#39;s
+					Discovery API. Allows searching and filtering by date, category, and
+					location
 				</ProjectCard>
 				<ProjectCard
 					img={pantryChefImg}

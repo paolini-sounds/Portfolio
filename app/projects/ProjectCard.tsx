@@ -1,6 +1,7 @@
-import { Github, SquareArrowOutUpRight } from 'lucide-react';
+import { SquareArrowOutUpRight } from 'lucide-react';
 import Image, { StaticImageData } from 'next/image';
 import React from 'react';
+import { FaGithub } from 'react-icons/fa';
 
 interface Props {
 	img: string | StaticImageData;
@@ -48,7 +49,7 @@ const ProjectCard = ({
 						className='btn btn-ghost rounded-xl text-amber-200 hover:text-teal-300 transition-all'
 						href={gitHubLink}
 					>
-						<Github />
+						<FaGithub />
 						GitHub
 					</a>
 					{liveLink && (

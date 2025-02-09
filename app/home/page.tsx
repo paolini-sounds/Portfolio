@@ -1,13 +1,10 @@
+'use client';
 import { motion } from 'framer-motion';
-import { Github, Linkedin } from 'lucide-react';
-import React from 'react';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import Image from 'next/image';
 import andrewpic from '../../public/Andrew_Picture.jpg';
-import handleScroll from '../util/handleScroll';
 
 const HomePage = () => {
-	const navbarHeight = document.querySelector('.navbar')?.clientHeight || 0;
-	console.log('navbarHeiht: ' + navbarHeight);
 	return (
 		<section id='home' className=''>
 			<motion.div
@@ -26,13 +23,12 @@ const HomePage = () => {
 						<Image
 							src={andrewpic}
 							alt='picture of andrew'
-							style={{ borderRadius: '50%' }}
-							objectFit='cover'
+							style={{ borderRadius: '50%', objectFit: 'cover' }}
 						/>
 					</motion.div>
 
 					<div className='px-5 md:px-0'>
-						<p className='text-teal-500 font-bold text-2xl'>Hello, I'm</p>
+						<p className='text-teal-500 font-bold text-2xl'>Hello, I&#39;m</p>
 						<h1 className='text-8xl font-bold drop-shadow-[0_0_10px_rgba(227,223,222,0.2)]'>
 							Andrew Paolini
 						</h1>
@@ -51,24 +47,18 @@ const HomePage = () => {
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ delay: 1.5, duration: 1, ease: 'easeOut' }}
 						>
-							<button
-								className='btn btn-primary mr-3'
-								onClick={() => handleScroll('projects')}
-							>
-								Projects
-							</button>
 							<a
 								href='https://www.linkedin.com/in/andrewpaolini5/'
 								className='btn text-violet-300 hover:text-violet-400 transition-all'
 							>
-								<Linkedin />
+								<FaLinkedin />
 								LinkedIn
 							</a>
 							<a
 								href='https://github.com/paolini-sounds'
 								className='btn text-teal-200 hover:text-teal-300 transition-all'
 							>
-								<Github />
+								<FaGithub />
 								GitHub
 							</a>
 						</motion.div>
