@@ -15,7 +15,21 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
 	title: 'Andrew Paolini',
-	description: 'portfolio website',
+	description: 'Portfolio Website',
+	openGraph: {
+		title: 'Andrew Paolini - Full Stack Developer',
+		description:
+			'Website showcasing projects and skills as a full stack developer.',
+		siteName: 'Andrew Paolini',
+		images: [
+			{
+				url: 'https://andrewpaolini.dev/PortfolioSite.png',
+				alt: 'screenshot of Andrew Paolini landing page',
+				width: 1200,
+				height: 746,
+			},
+		],
+	},
 };
 
 export default function RootLayout({
