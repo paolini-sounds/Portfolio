@@ -1,14 +1,32 @@
 'use client';
 import { motion } from 'framer-motion';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import NavLink from './NavLink';
 import handleScroll from '../util/handleScroll';
 
 const Navbar = () => {
+	const [isNavbarVisible, setIsNavbarVisible] = useState(true);
+
+	useEffect(() => {
+		const navbar = document.querySelector('.navbar'); // Adjust the selector if needed
+		if (!navbar) return;
+
+		const observer = new IntersectionObserver(
+			([entry]) => {
+				setIsNavbarVisible(entry.isIntersecting);
+			},
+			{ root: null, threshold: 0.1 } // 10% of the navbar must be visible
+		);
+
+		observer.observe(navbar);
+
+		return () => observer.disconnect();
+	}, []);
+
 	return (
 		<>
 			<motion.div
-				className='navbar sticky top-0 z-50 justify-between bg-black'
+				className='navbar justify-between bg-black'
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				transition={{ delay: 2, duration: 1 }}
@@ -19,11 +37,15 @@ const Navbar = () => {
 				>
 					Andrew Paolini
 				</button>
-				<div className='dropdown dropdown-end lg:hidden'>
+				<div
+					className={`dropdown dropdown-end fixed top-1 right-4 z-50 bg-opacity-0 ${
+						isNavbarVisible ? 'lg:hidden' : ''
+					}`}
+				>
 					<div
 						tabIndex={0}
 						role='button'
-						className='btn btn-ghost bg-black m-1'
+						className='btn btn-ghost bg-opacity-50 bg-black m-1'
 					>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
@@ -59,14 +81,13 @@ const Navbar = () => {
 					<NavLink target='projects' text='Projects' />
 					<NavLink target='contact' text='Contact' />
 				</div>
-
-				<motion.div
-					className='absolute bottom-0 left-1/2 h-[.5px] bg-teal-100'
-					initial={{ width: '0%', x: '-50%', opacity: 0.3 }}
-					animate={{ width: '100%', x: '-50%', opacity: 1 }}
-					transition={{ delay: 2, duration: 1, ease: 'easeIn' }}
-				/>
 			</motion.div>
+			<motion.div
+				className='h-[1px] w-full bg-teal-100 bg-opacity-40'
+				initial={{ width: '0%', opacity: 0.3 }}
+				animate={{ width: '100%', opacity: 1 }}
+				transition={{ delay: 2, duration: 1, ease: 'easeIn' }}
+			/>
 		</>
 	);
 };

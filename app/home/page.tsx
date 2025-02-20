@@ -8,10 +8,16 @@ const HomePage = () => {
 	return (
 		<section id='home' className=''>
 			<motion.div
-				className='hero bg-base-200 items-start pt-11 lg:pt-[20vh] min-h-screen'
+				className=' items-start bg-[url(/Gradient3.png)] bg-cover bg-center bg-no-repeat pt-11 lg:pt-[20vh] min-h-screen'
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				transition={{ duration: 1, ease: 'easeIn' }}
+				// style={{
+				// 	backgroundImage: 'url(/Gradient4.png)',
+				// 	backgroundSize: 'cover',
+				// 	backgroundPosition: 'center',
+				// 	backgroundRepeat: 'no-repeat',
+				// }}
 			>
 				<div className='hero-content flex-col lg:flex-row-reverse gap-0 lg:gap-10'>
 					<motion.div

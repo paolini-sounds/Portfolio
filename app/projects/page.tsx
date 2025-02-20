@@ -9,7 +9,10 @@ import portfolioSiteImg from '../../public/PortfolioSite.png';
 
 const ProjectsSection = () => {
 	return (
-		<section id='projects' className='px-2 mb-12'>
+		<section
+			id='projects'
+			className='px-2 mb-12 bg-[url(/Gradient4.png)] bg-cover bg-center bg-no-repeat'
+		>
 			<h1 className='text-6xl font-bold mt-8 mb-10'>Projects</h1>
 			<div className='grid grid-cols-1 lg:grid-cols-2 justify-items-center place-content-center items-center gap-x-32 gap-y-12 max-w-[100%] mx-auto lg:max-w-[90%] xl:max-w-[80%]'>
 				<ProjectCard
