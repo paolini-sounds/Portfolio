@@ -4,7 +4,7 @@ import ProjectsSection from './projects/page';
 
 export default function Home() {
 	return (
-		<div>
+		<div className=''>
 			<HomePage />
 			<ProjectsSection />
 			<ContactSection />
