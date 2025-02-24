@@ -22,7 +22,7 @@ const ProjectsSection = () => {
 					gitHubLink='https://github.com/paolini-sounds/reddit-clone'
 					liveLink='https://notreddit.lat/'
 				>
-					A MERN stack project based on the basic funtionalities of Reddit.
+					A MERN stack project based on the basic functionalities of Reddit.
 				</ProjectCard>
 				<ProjectCard
 					img={portfolioSiteImg}
